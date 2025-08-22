@@ -67,3 +67,7 @@ body {
     display: flex;
 
 }
+
+[x-cloak] {
+    display: none !important;
+}
