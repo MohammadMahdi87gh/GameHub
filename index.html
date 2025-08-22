@@ -1,0 +1,3009 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- metas -->
+    <meta name="وبسایت بازی آنلاین و رقابتی با جوایز ویژه" content="توضیح کوتاه درباره صفحه">
+    <meta name="keywords" content="بازی, بازی آنلاین, وبسایت بازی">
+    <meta name="author" content="mohdi">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.google.com/">
+    <meta name="theme-color" content="#c1121f">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="وبسایت بازی آنلاین">
+    <meta property="og:description" content="بازی آنلاین و رقابتی با جوایز ویژه">
+    <meta property="og:url" content="https://mohammadmahdi87gh.github.io/GameHub/">
+
+</head>
+
+<body dir="rtl" class="flex flex-col justify-center bg-slate-900">
+
+    <!-- هدر -->
+    <header class="relative w-full bg-slate-950 flex h-20 shadow-md" x-data="{ navbar: false}">
+
+        <!-- راست -->
+        <div class="w-2/6 md:w-4/6 flex items-center justify-start pr-3 lg:gap-2 md:pr-4 xl:px-16 lg:px-13">
+
+            <!-- لوگو -->
+            <div class="md:w-1/12 lg:w-1/6 h-full flex items-center justify-start xl:justify-end lg:justify-center">
+                <img src="imgs/logo_12_11zon_19_11zon.png" alt="img" class="w-11 md:w-10 h-auto xl:w-14">
+            </div>
+
+            <!-- دکمه نوبار -->
+            <div class="flex items-center justify-center text-white rounded-md p-2 mr-2 shadow-sm md:hidden" x-on:click="navbar = !navbar">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 focus:rotate-90">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+
+            </div>
+
+            <!-- منو -->
+            <div class="hidden md:w-11/12 lg:w-5/6 h-full md:flex items-center justify-start lg:justify-center">
+                <ul class="list-none flex text-white gap-4 lg:gap-5 xl:gap-7 text-xs xl:text-lg">
+
+                    <!-- صفحه اصلی -->
+                    <li class="flex gap-1 items-center hover:text-gray-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 xl:size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                        <a href="#">صفحه اصلی</a>
+                    </li>
+
+                    <!-- مسابقات -->
+                    <li class="flex gap-1 items-center hover:text-gray-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 xl:size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
+                        </svg>
+
+                        <a href="#games">مسابقات</a>
+                    </li>
+
+                    <!-- اخبار و مقالات -->
+                    <li class="flex gap-1 items-center hover:text-gray-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 xl:size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                        </svg>
+
+                        <a href="#">اخبار و مقالات</a>
+                    </li>
+
+                    <!-- قوانین سایت -->
+                    <li class="flex gap-1 items-center hover:text-gray-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 xl:size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                        </svg>
+
+                        <a href="#">قوانین سایت</a>
+                    </li>
+
+                    <!-- تماس با ما -->
+                    <li class="flex gap-1 items-center hover:text-gray-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 xl:size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                        </svg>
+
+                        <a href="#">تماس با ما</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- چپ -->
+        <div class="w-4/6 md:w-2/6 flex items-start justify-end md:justify-normal pl-2 md:pl-20">
+
+            <!-- علاقه مندی و سرچ -->
+            <div class="w-3/6 md:w-3/6 flex items-center justify-end md:justify-center lg:gap-1 h-full text-white">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                </svg>
+
+                <hr class="rotate-90 w-5 lg:w-6 xl:w-7 border border-spacing-1 border-gray-300"></hr>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+                <!-- ورود و عضویت -->
+                <a href="login.html" class="flex items-center justify-center rounded-full bg-linear-to-r from-indigo-700 to-purple-600 p-2 text-white mr-3 shadow-sm md:hidden">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+
+                </a>
+
+            </div>
+
+            <!-- ورود و عضویت -->
+            <div class="hidden w-3/6 md:flex items-center justify-start h-full">
+
+                <a href="login.html" class="w-auto p-2 rounded-lg bg-linear-to-r from-indigo-700 to-purple-600 text-white font-semibold flex items-center">
+
+                    <!-- آیکون کاربر -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7 mr-2 lg:mr-3 xl:mr-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+
+                    <p class="text-xs xl:text-sm pr-3">ورود</p>
+                    <hr class="rotate-90 w-3 border mt-1 xl:mt-2 border-gray-300"></hr>
+                    <p class="text-xs xl:text-sm ml-2 lg:ml-3 xl:ml-4">عضویت</p>
+
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- منو -->
+        <div class=" md:hidden absolute top-20 w-full shadow-sm py-5 bg-slate-800" x-show="navbar">
+            <ul class="list-none flex flex-col items-center justify-center text-white gap-4 text-sm">
+
+                <!-- صفحه اصلی -->
+                <li class="flex gap-1 items-center transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    <a href="#">صفحه اصلی</a>
+                </li>
+
+                <!-- مسابقات -->
+                <li class="flex gap-1 items-center transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
+                        </svg>
+
+                    <a href="#games">مسابقات</a>
+                </li>
+
+                <!-- اخبار و مقالات -->
+                <li class="flex gap-1 items-center transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                        </svg>
+
+                    <a href="#">اخبار و مقالات</a>
+                </li>
+
+                <!-- قوانین سایت -->
+                <li class="flex gap-1 items-center transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                        </svg>
+
+                    <a href="#">قوانین سایت</a>
+                </li>
+
+                <!-- تماس با ما -->
+                <li class="flex gap-1 items-center transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                        </svg>
+
+                    <a href="#">تماس با ما</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+    <!-- بخش 1 -->
+    <div class="w-full flex p-5 flex-col items-center">
+
+        <!-- بالا -->
+        <div class="w-full flex flex-col p-5 sm:flex-row">
+
+            <!-- متن -->
+            <div class="w-full flex flex-col gap-4 items-center py-5 sm:justify-center sm:w-7/12 lg:items-start lg:px-5 xl:w-6/12 xl:gap-8 xl:pr-8">
+
+                <!-- تیتر -->
+                <h1 class="text-2xl font-bold sm:text-4xl xl:text-5xl text-white">به میدان
+                    <span class="text-3xl font-black text-indigo-500 sm:text-5xl xl:text-6xl">نبرد</span> خوش آمدید!</h1>
+
+                <!-- توضیحات -->
+                <p class="lg:hidden text-center text-xs/4 sm:text-sm/6 lg:text-start xl:text-sm/7 text-white">جایی که هیجان، رقابت و مهارت تعیین کننده است. در سایت ما میتوانید جدیدترین بازی های آنلاین را تجربه کنید، با دوستان خود مسابقه دهید و جوایز ویژه برنده شوید. به جمع گیمر های حرفه ای بپیوندید و از رقابت لذت ببرید!</p>
+                <p class=" hidden lg:block text-start text-sm/7 mt-3 xl:text-lg/9 text-white">اینجا جایی است که هیجان و رقابت هیچ وقت متوقف نمیشود. در سایت ما میتوانید جدیدترین بازی های آنلاین را تجربه کنید، با دوستان خود مسابقه دهید و شانس بنرده شدن جوایز ویژه را داشته باشید. مهارت های خود را به چالش بکشید و نشان دهید چه کسی فرمانروای
+                    واقعی میدان نبرد است!</p>
+
+                <!-- دکمه -->
+                <a href="#" class="mt-3 py-2 px-3 items-center rounded-md bg-linear-to-r from-indigo-700 to-purple-600 text-white flex gap-3 text-sm sm:text-base lg:text-lg xl:text-xl xl:px-6 xl:py-3 xl:rounded-xl">مشاهده لیست مسابقه ها
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+
+            </a>
+
+            </div>
+
+            <!-- عکس -->
+            <div class="w-full flex justify-center py-5 sm:w-5/12 xl:w-6/12 xl:items-center">
+
+                <img src="imgs/section1_20_11zon_27_11zon.png" alt="cheak net!" class="w-10/12 h-auto sm:w-full xl:w-8/12">
+
+            </div>
+
+        </div>
+
+        <!-- پایین -->
+        <div class="w-full flex flex-col md:flex-row lg:w-10/12 py-3 px-2 bg-white shadow-md rounded-xl gap-2 -mt-10">
+
+            <!-- دوتا از راست -->
+            <div class="w-full flex flex-row p-1">
+
+                <!-- اولی از دوتا راست -->
+                <div class="w-3/6 flex flex-row p-1">
+
+                    <!-- عکس -->
+                    <div class="w-2/6 flex items-center justify-center">
+
+                        <img src="imgs/secu1_21_11zon_28_11zon.png" alt="cheak net!" class="w-3/4">
+
+                    </div>
+
+                    <!-- متن -->
+                    <div class="w-4/6 flex flex-col items-start justify-center gap-1">
+
+                        <p class="font-bold text-sm text-gray-800 xl:text-base">ثبت نام و ورود</p>
+                        <p class="text-gray-500 text-xs xl:text-sm">به جمع ما بپیوندید</p>
+
+                    </div>
+
+                </div>
+
+                <!-- دومی از دوتا راست -->
+                <div class="w-3/6 flex flex-row p-1">
+
+                    <!-- عکس -->
+                    <div class="w-2/6 flex items-center justify-center">
+
+                        <img src="imgs/secu2_22_11zon_29_11zon.png" alt="cheak net!" class="w-3/4">
+
+                    </div>
+
+                    <!-- متن -->
+                    <div class="w-4/6 flex flex-col items-start justify-center gap-1">
+
+                        <p class="font-bold text-sm text-gray-800 xl:text-base">انتخاب بازی</p>
+                        <p class="text-gray-500 text-xs xl:text-sm">بازی خودتان را انتخاب کنید</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- دوتا از چپ -->
+            <div class="w-full flex flex-row p-1">
+
+                <!-- اولی از دوتا چپ -->
+                <div class="w-3/6 flex flex-row p-1">
+
+                    <!-- عکس -->
+                    <div class="w-2/6 flex items-center justify-center">
+
+                        <img src="imgs/secu3_23_11zon_30_11zon.png" alt="cheak net!" class="w-3/4">
+
+                    </div>
+
+                    <!-- متن -->
+                    <div class="w-4/6 flex flex-col items-start justify-center gap-1">
+
+                        <p class="font-bold text-sm text-gray-800 xl:text-base">شروع مسابقه</p>
+                        <p class="text-gray-500 text-xs xl:text-sm">بازی خودتان را شروع کنید</p>
+
+                    </div>
+
+                </div>
+
+                <!-- دومی از دوتا چپ -->
+                <div class="w-3/6 flex flex-row p-1">
+
+                    <!-- عکس -->
+                    <div class="w-2/6 flex items-center justify-center">
+
+                        <img src="imgs/secu4_24_11zon_31_11zon.png" alt="cheak net!" class="w-3/4">
+
+                    </div>
+
+                    <!-- متن -->
+                    <div class="w-4/6 flex flex-col items-start justify-center gap-1">
+
+                        <p class="font-bold text-sm text-gray-800 xl:text-base">دریافت جایزه</p>
+                        <p class="text-gray-500 text-xs xl:text-sm">رقابت کنید و جایزه بگیرید</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- بخش 2 -->
+    <main class="w-full flex flex-col py-20 gap-10 px-2" id="games">
+
+        <!-- اولی -->
+        <div class="w-full flex flex-col items-center gap-4">
+
+            <!-- تیتر -->
+            <h1 class="text-xl font-bold text-white md:text-2xl">مسابقات درحال شرکت پذیری و عضوگیری</h1>
+
+            <!-- دیو نطقه اسلایدر -->
+            <div class="rounded-sm w-18 bg-white flex flex-row indicators">
+
+                <div class="w-1/3 bg-yellow-500 rounded-sm p-1 dot"></div>
+
+            </div>
+
+        </div>
+
+        <!-- دومی -->
+        <div class="gap-8 flex flex-col">
+
+            <!-- اسلایدر -->
+            <div class="w-full  flex flex-row justify-center carousel">
+
+                <!-- اولی -->
+                <div class="h-72 shadow-lg rounded-3xl item lg:h-80 xl:h-96">
+
+                    <img src="imgs/card1_1_11zon.jpg" alt="cheak net!" class="w-full h-full rounded-3xl relative">
+
+                    <!-- توضیحات عکس -->
+                    <div class="w-full h-full flex items-end rounded-3xl bg-linear-to-b from-white/0 to-black absolute top-0 overlay">
+
+                        <!-- دیو 66درصد -->
+                        <div class="w-full h-2/3 flex flex-col pr-2 gap-2 xl:justify-center">
+
+                            <!-- اسم بازی -->
+                            <div class="font-bold text-lg text-white md:text-2xl">
+                                <h5>پابجی</h5>
+                            </div>
+
+                            <!-- دیو دوم -->
+                            <div class="flex flex-row xl:mt-2">
+
+                                <!-- راست -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">وضعیت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-yellow-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">فعال</h5>
+                                    </div>
+
+                                </div>
+
+                                <!-- چپ -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">عضویت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-green-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">رایگان</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- دیو سوم -->
+                            <div class="flex flex-col gap-2 mt-1">
+
+                                <!-- دیو اول -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                    <h5>زمان: ساعت 9 شب</h5>
+
+                                </div>
+
+                                <!-- دیو دوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+
+
+                                    <h5>جایزه: 300 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو سوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+
+                                    <h5>هزینه عضویت: 100 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو چهارم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+
+
+                                    <h5>درحال بارگذاری</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- دومی -->
+                <div class="h-72 shadow-lg rounded-3xl item lg:h-80 xl:h-96">
+
+                    <img src="imgs/card2_2_11zon.jpg" alt="cheak net!" class="w-full h-full rounded-3xl relative">
+
+                    <!-- توضیحات عکس -->
+                    <div class="w-full h-full flex items-end rounded-3xl bg-linear-to-b from-white/0 to-black absolute top-0 overlay">
+
+                        <!-- دیو 66درصد -->
+                        <div class="w-full h-2/3 flex flex-col pr-2 gap-2 xl:justify-center">
+
+                            <!-- اسم بازی -->
+                            <div class="font-bold text-lg text-white md:text-2xl">
+                                <h5>بتل رویال</h5>
+                            </div>
+
+                            <!-- دیو دوم -->
+                            <div class="flex flex-row xl:mt-2">
+
+                                <!-- راست -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">وضعیت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-yellow-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">فعال</h5>
+                                    </div>
+
+                                </div>
+
+                                <!-- چپ -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">عضویت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-green-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">رایگان</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- دیو سوم -->
+                            <div class="flex flex-col gap-2 mt-1">
+
+                                <!-- دیو اول -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                    <h5>زمان: ساعت 9 شب</h5>
+
+                                </div>
+
+                                <!-- دیو دوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+
+
+                                    <h5>جایزه: 300 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو سوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+
+                                    <h5>هزینه عضویت: 100 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو چهارم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+
+
+                                    <h5>درحال بارگذاری</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- سومی -->
+                <div class="h-72 shadow-lg rounded-3xl item lg:h-80 xl:h-96">
+
+                    <img src="imgs/card3_3_11zon.jpg" alt="cheak net!" class="w-full h-full rounded-3xl relative">
+
+                    <!-- توضیحات عکس -->
+                    <div class="w-full h-full flex items-end rounded-3xl bg-linear-to-b from-white/0 to-black absolute top-0 overlay">
+
+                        <!-- دیو 66درصد -->
+                        <div class="w-full h-2/3 bg-slate-200/0 flex flex-col pr-2 gap-2 xl:justify-center">
+
+                            <!-- اسم بازی -->
+                            <div class="font-bold text-lg text-white md:text-2xl">
+                                <h5>بتلفیلد</h5>
+                            </div>
+
+                            <!-- دیو دوم -->
+                            <div class="flex flex-row xl:mt-2">
+
+                                <!-- راست -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">وضعیت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-yellow-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">فعال</h5>
+                                    </div>
+
+                                </div>
+
+                                <!-- چپ -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">عضویت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-green-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">رایگان</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- دیو سوم -->
+                            <div class="flex flex-col gap-2 mt-1">
+
+                                <!-- دیو اول -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                    <h5>زمان: ساعت 9 شب</h5>
+
+                                </div>
+
+                                <!-- دیو دوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+
+
+                                    <h5>جایزه: 300 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو سوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+
+                                    <h5>هزینه عضویت: 100 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو چهارم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+
+
+                                    <h5>درحال بارگذاری</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- چهارمی -->
+                <div class="h-72 shadow-lg rounded-3xl item lg:h-80 xl:h-96">
+
+                    <img src="imgs/card4_4_11zon.jpg" alt="cheak net!" class="w-full h-full rounded-3xl relative">
+
+                    <!-- توضیحات عکس -->
+                    <div class="w-full h-full flex items-end rounded-3xl bg-linear-to-b from-white/0 to-black absolute top-0 overlay">
+
+                        <!-- دیو 66درصد -->
+                        <div class="w-full h-2/3 flex flex-col pr-2 gap-2 xl:justify-center">
+
+                            <!-- اسم بازی -->
+                            <div class="font-bold text-lg text-white md:text-2xl">
+                                <h5>لبه آینه</h5>
+                            </div>
+
+                            <!-- دیو دوم -->
+                            <div class="flex flex-row xl:mt-2">
+
+                                <!-- راست -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">وضعیت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-yellow-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">فعال</h5>
+                                    </div>
+
+                                </div>
+
+                                <!-- چپ -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">عضویت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-green-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">رایگان</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- دیو سوم -->
+                            <div class="flex flex-col gap-2 mt-1">
+
+                                <!-- دیو اول -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                    <h5>زمان: ساعت 9 شب</h5>
+
+                                </div>
+
+                                <!-- دیو دوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+
+
+                                    <h5>جایزه: 300 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو سوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+
+                                    <h5>هزینه عضویت: 100 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو چهارم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+
+
+                                    <h5>درحال بارگذاری</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- پنجمی -->
+                <div class="h-72 shadow-lg rounded-3xl item lg:h-80 xl:h-96">
+
+                    <img src="imgs/card5_1_11zon_5_11zon.webp" alt="cheak net!" class="w-full h-full rounded-3xl relative">
+
+                    <!-- توضیحات عکس -->
+                    <div class="w-full h-full flex items-end rounded-3xl bg-linear-to-b from-white/0 to-black absolute top-0 overlay">
+
+                        <!-- دیو 66درصد -->
+                        <div class="w-full h-2/3 flex flex-col pr-2 gap-2 xl:justify-center">
+
+                            <!-- اسم بازی -->
+                            <div class="font-bold text-lg text-white md:text-2xl">
+                                <h5>کلش آف کلنز</h5>
+                            </div>
+
+                            <!-- دیو دوم -->
+                            <div class="flex flex-row xl:mt-2">
+
+                                <!-- راست -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">وضعیت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-yellow-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">فعال</h5>
+                                    </div>
+
+                                </div>
+
+                                <!-- چپ -->
+                                <div class="w-1/2 h-full flex flex-row items-center gap-1">
+
+                                    <h5 class="text-xs text-white lg:text-sm">عضویت:</h5>
+
+                                    <!-- وضعیت و عضویت -->
+                                    <div class="px-2 py-0.5 rounded-lg bg-green-600 flex justify-center items-center">
+                                        <h5 class="text-xs text-white lg:text-sm">رایگان</h5>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- دیو سوم -->
+                            <div class="flex flex-col gap-2 mt-1">
+
+                                <!-- دیو اول -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                    <h5>زمان: ساعت 9 شب</h5>
+
+                                </div>
+
+                                <!-- دیو دوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+
+
+                                    <h5>جایزه: 300 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو سوم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+
+                                    <h5>هزینه عضویت: 100 هزار تومان</h5>
+
+                                </div>
+
+                                <!-- دیو چهارم -->
+                                <div class="flex flex-row items-center gap-1 text-xs text-white lg:text-sm">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+
+
+                                    <h5>درحال بارگذاری</h5>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- دکمه -->
+            <div class="w-full controls flex flex-row items-center justify-center gap-4 text-white">
+
+                <button id="prev" class="rounded-full shadow-sm border bg-slate-950 p-3 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                </button>
+
+                <button id="next" class="rounded-full shadow-sm border bg-slate-950 p-3 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- سومی -->
+        <div class="w-full flex flex-col items-center gap-4">
+
+            <!-- دکمه -->
+            <a href="#" class="mt-3 py-2 px-8 items-center rounded-md bg-linear-to-r from-indigo-700 to-purple-600 text-white flex gap-3 text-sm sm:text-base lg:text-lg xl:text-xl xl:px-6 xl:py-3 xl:rounded-xl">مشاهده همه
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6 xl:size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- بخش 3 -->
+    <main class="w-full flex flex-col py-10 gap-10 px-5 md:flex-row xl:px-52 xl:gap-20">
+
+        <!-- اولی -->
+        <div class="w-full p-5 rounded-lg shadow-xl flex flex-col gap-5 bg-white">
+
+            <!-- دیو اسم بازی -->
+            <div class="w-full flex flex-row">
+
+                <!-- راست -->
+                <div class="w-2/3 flex flex-row gap-3">
+
+                    <img src="imgs/game8_5_11zon.jpg" alt="cheak net!" class="rounded-lg overflow-hidden w-16 h-auto lg:w-20">
+
+                    <!-- اسم بازی -->
+                    <div class="flex flex-col justify-center gap-2">
+
+                        <h5 class="font-bold text-gray-900 lg:text-xl">بازی کلش آف کلنز</h5>
+
+                        <!-- در حال بازی -->
+                        <div class="flex flex-row gap-1">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                            </svg>
+
+                            <p class="text-gray-500 text-xs lg:text-sm">درحال بازی</p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- شرکت کننده -->
+                <div class="w-1/3 flex flex-col gap-1 items-end justify-center">
+
+                    <h5 class="text-xl font-bold ml-2 lg:text-2xl">185</h5>
+
+                    <p class="text-xs text-gray-500 lg:text-sm">شرکت کننده</p>
+
+                </div>
+
+            </div>
+
+            <!-- دیو تایمر -->
+            <div class="w-full flex flex-col gap-2">
+
+                <!-- بالا -->
+                <div class="w-full flex flex-row">
+
+                    <!-- روز مانده -->
+                    <div class="w-1/2 flex flex-col items-start justify-center gap-1">
+
+                        <h5 class="text-xs text-gray-500 lg:text-sm">اعتبار تا 1 روز دیگه</h5>
+                        <h5 class="text-xs text-gray-500 lg:text-sm">فرصت بازی رو از دست نده</h5>
+
+                    </div>
+
+                    <!-- تایمر -->
+                    <div class="w-1/2 flex flex-row gap-3">
+
+                        <!-- اعداد -->
+                        <div class="w-5/6 flex flex-row gap-3 justify-center lg:justify-end">
+
+                            <!-- ثانیه -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="seconds" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">ثانیه</p>
+
+                            </div>
+
+                            <!-- دقیقه -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="minutes" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">دقیقه</p>
+
+                            </div>
+
+                            <!-- ساعت -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="hours" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">ساعت</p>
+
+                            </div>
+
+                            <!-- روز -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="days" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">روز</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- آیکون -->
+                        <div class="flex items-center justify-center text-gray-500">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 lg:size-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- تایمر-بار -->
+                <div class="w-full bg-gray-300 rounded-sm flex justify-end progress-container">
+
+                    <div id="progress" class="w-full transition-all p-1 bg-orange-500 rounded-sm"></div>
+
+                </div>
+
+
+            </div>
+
+            <!-- دیو جایزه -->
+            <div class="w-full flex flex-row mt-2">
+
+                <!-- جایزه -->
+                <div class="w-1/2 flex flex-row gap-1 items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 lg:size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+
+
+                    <p class="text-xs lg:text-sm text-gray-500 flex items-center gap-1">جایزه: <span class="text-sm font-bold text-gray-700 md:text-base lg:text-lg">5,000.000</span> تومان</p>
+
+                </div>
+
+                <!-- شروع بازی -->
+                <div class="w-1/2 flex justify-end">
+
+                    <button class="cursor-pointer p-1 md:p-0 md:py-2 md:px-4 px-4 lg:text-base bg-gradient-to-b from-gray-800 to-gray-700 text-white rounded-lg flex items-center text-sm flex-row gap-2">شروع بازی
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- دیو افراد -->
+            <div class="w-full mt-4 flex flex-row gap-3">
+
+                <!-- اولی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men2_14_11zon_21_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-yellow-500">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-yellow-500 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">1</h6>
+                    </div>
+
+                </div>
+
+                <!-- دومی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-full border border-stone-200 flex items-center justify-center py-1 md:w-auto">
+                        <img src="imgs/women1_25_11zon_32_11zon.png" alt="cheak net!" class="w-7 h-auto rounded-full shadow-blue-500 md:mx-4 md:w-6 lg:w-7">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-red-400">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-red-400 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">2</h6>
+                    </div>
+
+                </div>
+
+                <!-- سومی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-slate-600">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-slate-600 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">3</h6>
+                    </div>
+
+                </div>
+
+                <!-- چهارمی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men3_15_11zon_22_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500 xl:mt-1">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-neutral-500">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-neutral-500 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">4</h6>
+                    </div>
+
+                </div>
+
+                <!-- پنجمی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md px-1 border border-stone-200 flex items-center justify-center py-1.5">
+                        <img src="imgs/women2_26_11zon_33_11zon.png" alt="cheak net!" class="w-12 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-neutral-400">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-neutral-400 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">1</h6>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- دومی -->
+        <div class="w-full p-5 rounded-lg shadow-xl flex flex-col gap-5 bg-white">
+
+            <!-- دیو اسم بازی -->
+            <div class="w-full flex flex-row">
+
+                <!-- راست -->
+                <div class="w-2/3 flex flex-row gap-3">
+
+                    <img src="imgs/game5_9_11zon_15_11zon.png" alt="cheak net!" class="rounded-lg overflow-hidden w-16 h-auto lg:w-20">
+
+                    <!-- اسم بازی -->
+                    <div class="flex flex-col justify-center gap-2">
+
+                        <h5 class="font-bold text-gray-900 lg:text-xl">بازی پابجی</h5>
+
+                        <!-- در حال بازی -->
+                        <div class="flex flex-row gap-1">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                            </svg>
+
+                            <p class="text-gray-500 text-xs lg:text-sm">درحال بازی</p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- شرکت کننده -->
+                <div class="w-1/3 flex flex-col gap-1 items-end justify-center">
+
+                    <h5 class="text-xl font-bold ml-2 lg:text-2xl">142</h5>
+
+                    <p class="text-xs text-gray-500 lg:text-sm">شرکت کننده</p>
+
+                </div>
+
+            </div>
+
+            <!-- دیو تایمر -->
+            <div class="w-full flex flex-col gap-2">
+
+                <!-- بالا -->
+                <div class="w-full flex flex-row">
+
+                    <!-- روز مانده -->
+                    <div class="w-1/2 flex flex-col items-start justify-center gap-1">
+
+                        <h5 class="text-xs text-gray-500 lg:text-sm">اعتبار تا 2 روز دیگه</h5>
+                        <h5 class="text-xs text-gray-500 lg:text-sm">فرصت بازی رو از دست نده</h5>
+
+                    </div>
+
+                    <!-- تایمر -->
+                    <div class="w-1/2 flex flex-row gap-3">
+
+                        <!-- اعداد -->
+                        <div class="w-5/6 flex flex-row gap-3 justify-center lg:justify-end">
+
+                            <!-- ثانیه -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="seconds" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">ثانیه</p>
+
+                            </div>
+
+                            <!-- دقیقه -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="minutes" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">دقیقه</p>
+
+                            </div>
+
+                            <!-- ساعت -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="hours" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">ساعت</p>
+
+                            </div>
+
+                            <!-- روز -->
+                            <div class="flex flex-col items-center justify-center">
+
+                                <!-- عدد -->
+                                <p id="days" class="text-xs text-gray-500 lg:text-sm">00</p>
+
+                                <!-- تایم -->
+                                <p class="text-xs text-gray-500 lg:text-sm">روز</p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- آیکون -->
+                        <div class="flex items-center justify-center text-gray-500">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 lg:size-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- تایمر-بار -->
+                <div class="w-full bg-gray-300 rounded-sm flex justify-end progress-container">
+
+                    <div id="progress" class="w-full transition-all p-1 bg-orange-500 rounded-sm"></div>
+
+                </div>
+
+
+            </div>
+
+            <!-- دیو جایزه -->
+            <div class="w-full flex flex-row mt-2">
+
+                <!-- جایزه -->
+                <div class="w-1/2 flex flex-row gap-1 items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7 lg:size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+
+
+                    <p class="text-xs lg:text-sm text-gray-500 flex items-center gap-1">جایزه: <span class="text-sm font-bold text-gray-700 md:text-base lg:text-lg">2,000.000</span> تومان</p>
+
+                </div>
+
+                <!-- شروع بازی -->
+                <div class="w-1/2 flex justify-end">
+
+                    <button class="cursor-pointer p-1 md:p-0 md:py-2 md:px-4 px-4 lg:text-base bg-gradient-to-b from-gray-800 to-gray-700 text-white rounded-lg flex items-center text-sm flex-row gap-2">شروع بازی
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- دیو افراد -->
+            <div class="w-full mt-4 flex flex-row gap-3">
+
+                <!-- اولی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-yellow-500">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-yellow-500 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">1</h6>
+                    </div>
+
+                </div>
+
+                <!-- دومی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-full border border-stone-200 flex items-center justify-center py-1 md:w-auto">
+                        <img src="imgs/women1_25_11zon_32_11zon.png" alt="cheak net!" class="w-7 h-auto rounded-full shadow-blue-500 md:mx-4 md:w-6 lg:w-7">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-red-400">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-red-400 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">2</h6>
+                    </div>
+
+                </div>
+
+                <!-- سومی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men2_14_11zon_21_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-slate-600">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-slate-600 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">3</h6>
+                    </div>
+
+                </div>
+
+                <!-- چهارمی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md w-auto border border-stone-200 flex items-center justify-center py-1">
+                        <img src="imgs/men3_15_11zon_22_11zon.png" alt="cheak net!" class="w-14 h-auto rounded-full shadow-blue-500 xl:mt-1">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-neutral-500">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-neutral-500 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">4</h6>
+                    </div>
+
+                </div>
+
+                <!-- پنجمی -->
+                <div class="w-1/5 flex flex-col items-center">
+
+                    <!-- عکس -->
+                    <div class="rounded-2xl shadow-md px-1 border border-stone-200 flex items-center justify-center py-1.5">
+                        <img src="imgs/women2_26_11zon_33_11zon.png" alt="cheak net!" class="w-12 h-auto rounded-full shadow-blue-500">
+                    </div>
+
+                    <hr class="rotate-90 w-2 mt-1 border-neutral-400">
+
+                    <!-- مدال -->
+                    <div class="text-xs text-white bg-neutral-400 rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                        <h6 class="mt-1">1</h6>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- بخش 4 -->
+    <div class="w-full flex flex-col gap-5 py-16 px-10" id="best-game">
+
+        <!-- بالا -->
+        <div class="w-full text-center flex flex-col gap-4 items-center">
+
+            <!-- تیتر -->
+            <h1 class="text-xl font-bold text-white md:text-2xl"> پرطرفدار ترین بازی ها</h1>
+
+            <!-- دیو نطقه اسلایدر -->
+            <div class="rounded-sm w-18 bg-white flex flex-row indicators">
+
+                <div class="w-1/3 bg-yellow-500 rounded-sm p-1 dot"></div>
+
+            </div>
+
+        </div>
+
+        <!-- پایین -->
+        <div class="w-full flex flex-col md:flex-row xl:px-40">
+
+            <!-- بالا و راست -->
+            <div class="w-full flex flex-row items-center gap-3 p-3 md:gap-5">
+
+                <!-- اولی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game1_5_11zon_11_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- دومی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game2_6_11zon_12_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- سومی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game3_7_11zon_13_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- چهارمی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game4.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+            </div>
+
+            <!-- پایین و چپ -->
+            <div class="w-full flex flex-row items-center gap-3 p-3 md:gap-5">
+
+                <!-- اولی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game5_9_11zon_15_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- دومی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game6_10_11zon_16_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- سومی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game7_11_11zon_17_11zon.png" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+                <!-- چهارمی -->
+                <div class="w-1/4 rounded-lg shadow-lg cursor-pointer">
+                    <img src="imgs/game8_5_11zon.jpg" alt="cheak net!" class="w-full h-full rounded-lg">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- بخش 5 -->
+    <div class="w-full h-auto flex flex-col gap-10 py-16 px-10 md:flex-row xl:px-48" id="best-user">
+
+        <!-- بالا و راست -->
+        <div class="w-full rounded-xl lg:rounded-3xl shadow-lg flex flex-col gap-3 bg-linear-to-t from-slate-600 to-slate-800">
+
+            <!-- دیو اصلی محتوا -->
+            <div class="ُw-full h-auto flex flex-col gap-3 py-7 rounded-lg" x-data="{ opentab: 1 }">
+
+                <!-- اولی -->
+                <div class="w-full flex flex-col items-center justify-center gap-1">
+
+                    <!-- آیکن -->
+                    <svg class="size-16 lg:size-20 text-white" viewBox="0 0 130 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_13_349)">
+<foreignObject x="38.0836" y="38.6708" width="23.0157" height="23.0157"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.43px);clip-path:url(#bgblur_0_13_349_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="2.85385">
+<path d="M58.2454 50.1788C58.2454 54.958 54.3708 58.8326 49.5912 58.8326C44.8121 58.8326 40.9374 54.958 40.9374 50.1788C40.9374 45.3992 44.8121 41.5246 49.5912 41.5246C54.3708 41.5246 58.2454 45.3992 58.2454 50.1788Z" fill="url(#paint0_linear_13_349)" fill-opacity="0.5"/>
+<path d="M49.5907 41.881C54.1733 41.881 57.8886 45.5963 57.8886 50.1789C57.8886 54.761 54.1733 58.4758 49.5907 58.4758C45.0089 58.4755 41.2939 54.7608 41.2939 50.1789C41.2939 45.5965 45.0088 41.8813 49.5907 41.881Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.713461"/>
+</g>
+<foreignObject x="69.0844" y="38.6708" width="23.0157" height="23.0157"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.43px);clip-path:url(#bgblur_1_13_349_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="2.85385">
+<path d="M89.2462 50.1788C89.2462 54.958 85.3716 58.8326 80.5924 58.8326C75.8129 58.8326 71.9382 54.958 71.9382 50.1788C71.9382 45.3992 75.8129 41.5246 80.5924 41.5246C85.3716 41.5246 89.2462 45.3992 89.2462 50.1788Z" fill="url(#paint1_linear_13_349)" fill-opacity="0.5"/>
+<path d="M80.5925 41.881C85.1746 41.8811 88.8894 45.5963 88.8894 50.1789C88.8894 54.761 85.1746 58.4757 80.5925 58.4758C76.01 58.4758 72.2947 54.761 72.2947 50.1789C72.2947 45.5963 76.0099 41.881 80.5925 41.881Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.713461"/>
+</g>
+<g filter="url(#filter3_f_13_349)">
+<path d="M50.5838 44.9835C48.2632 44.2399 44.0938 46.669 44.4188 51.1484" stroke="#ECFFF8" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g filter="url(#filter4_f_13_349)">
+<path d="M81.399 44.9835C79.0785 44.2399 74.9091 46.669 75.2341 51.1484" stroke="#ECFFF8" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round"/>
+</g>
+<foreignObject x="1.58068" y="-2.04116" width="127.028" height="86.2712"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.43px);clip-path:url(#bgblur_2_13_349_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter5_i_13_349)" data-figma-bg-blur-radius="2.85385">
+<path d="M119.7 20.3387L119.698 20.32H119.696C117.866 9.25252 108.255 0.812683 96.6707 0.812683C90.1031 0.812683 84.1724 3.52798 79.9313 7.89277L50.2605 7.89322C46.0191 3.52842 40.0891 0.813127 33.5211 0.813127C21.9367 0.813127 12.3268 9.25331 10.4956 20.3205L10.4938 20.32L10.4911 20.3387L4.43452 65.1108C4.43452 74.0936 11.7158 81.3762 20.6999 81.3762C26.3272 81.3762 31.2852 78.5189 34.2042 74.1753H34.2056L43.2385 59.4229C40.3008 57.3954 38.3679 54.0097 38.3679 50.1791C38.3679 43.9893 43.4037 38.9534 49.5935 38.9534C55.7216 38.9534 60.7099 43.8898 60.812 49.9939H69.377C69.4773 43.8902 74.4669 38.9534 80.5954 38.9534C86.7871 38.9534 91.8211 43.9905 91.8211 50.1791C91.8211 54.0115 89.8882 57.3954 86.9504 59.4229L95.9834 74.1753H95.9847C98.9039 78.5175 103.863 81.3762 109.49 81.3762C118.473 81.3762 125.754 74.0937 125.754 65.1108L119.7 20.3387ZM44.6922 28.0821H36.3671V36.4073H28.5214V28.0821H20.1975V20.2365H28.5214V11.9113H36.3671V20.2365H44.6922V28.0821ZM97.7478 11.9122C100.047 11.9122 101.909 13.7759 101.909 16.0732C101.909 18.3707 100.045 20.2356 97.7478 20.2356C95.4477 20.2356 93.5854 18.3702 93.5854 16.0732C93.5854 13.7758 95.4491 11.9122 97.7478 11.9122ZM89.6624 28.3209C87.3623 28.3209 85.5 26.4586 85.5 24.1599C85.5 21.8611 87.3637 19.9989 89.6624 19.9989C91.9612 19.9989 93.8233 21.8626 93.8233 24.1599C93.8251 26.4587 91.961 28.3209 89.6624 28.3209ZM97.7478 36.4063C95.4477 36.4063 93.5854 34.5409 93.5854 32.2439C93.5854 29.9465 95.4491 28.0829 97.7478 28.0829C100.047 28.0829 101.909 29.9466 101.909 32.2439C101.909 34.5409 100.046 36.4063 97.7478 36.4063ZM105.832 28.3209C103.533 28.3209 101.671 26.4586 101.671 24.1599C101.671 21.8611 103.535 19.9989 105.832 19.9989C108.132 19.9989 109.994 21.8626 109.994 24.1599C109.996 26.4587 108.132 28.3209 105.832 28.3209Z" fill="url(#paint2_linear_13_349)"/>
+<path d="M96.6709 1.06268C108.131 1.06275 117.638 9.41189 119.449 20.3605L119.454 20.3869L125.504 65.1281C125.495 73.965 118.329 81.1262 109.49 81.1262C103.95 81.1262 99.067 78.3122 96.1923 74.0363L96.1738 74.009L87.2851 59.4914C90.1783 57.4061 92.0712 54.0128 92.0712 50.1789C92.0712 43.8525 86.9252 38.7034 80.5957 38.7033C74.4126 38.7033 69.368 43.6184 69.1376 49.7443H61.0517C60.8198 43.6181 55.7763 38.7034 49.5937 38.7033C43.2659 38.7033 38.1182 43.8511 38.1181 50.1789C38.1181 54.0108 40.0102 57.406 42.9033 59.4914L34.0029 74.0266L33.997 74.0363C31.1225 78.3135 26.2405 81.1261 20.7001 81.1262C11.8599 81.1262 4.69385 73.9649 4.68452 65.1281L10.7363 20.3957L10.7421 20.3615C12.5538 9.41298 22.0615 1.06268 33.5214 1.06268C40.0189 1.06279 45.8848 3.74922 50.081 8.06757L50.1552 8.14276H80.0371L80.1103 8.06659C84.3064 3.74819 90.1736 1.06268 96.6709 1.06268ZM28.2714 19.9865H19.9472V28.3322H28.2714V36.6574H36.6171V28.3322H44.9423V19.9865H36.6171V11.6613H28.2714V19.9865ZM97.748 27.8332C95.3113 27.8332 93.3359 29.8088 93.3359 32.2443C93.3361 34.6791 95.3099 36.6564 97.748 36.6564C100.185 36.6563 102.159 34.6789 102.159 32.2443C102.159 29.8091 100.185 27.8333 97.748 27.8332ZM89.6621 19.7492C87.2256 19.7494 85.25 21.7235 85.25 24.1603C85.2502 26.5968 87.2243 28.5703 89.6621 28.5705C92.0986 28.5705 94.0751 26.5966 94.0732 24.1594C94.0729 21.7243 92.0988 19.7492 89.6621 19.7492ZM105.832 19.7492C103.397 19.7492 101.421 21.7234 101.421 24.1603C101.421 26.5969 103.395 28.5705 105.832 28.5705C108.27 28.5704 110.246 26.5965 110.244 24.1594C110.244 21.7243 108.27 19.7493 105.832 19.7492ZM97.748 11.6623C95.3113 11.6623 93.3359 13.6379 93.3359 16.0734C93.336 18.5083 95.3098 20.4855 97.748 20.4855C100.183 20.4854 102.159 18.5087 102.159 16.0734C102.159 13.6382 100.185 11.6624 97.748 11.6623Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.5"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_13_349" x="0.434526" y="0.812683" width="129.32" height="88.5636" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13_349"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_349" result="shape"/>
+</filter>
+<clipPath id="bgblur_0_13_349_clip_path" transform="translate(-38.0836 -38.6708)"><path d="M58.2454 50.1788C58.2454 54.958 54.3708 58.8326 49.5912 58.8326C44.8121 58.8326 40.9374 54.958 40.9374 50.1788C40.9374 45.3992 44.8121 41.5246 49.5912 41.5246C54.3708 41.5246 58.2454 45.3992 58.2454 50.1788Z"/>
+</clipPath><clipPath id="bgblur_1_13_349_clip_path" transform="translate(-69.0844 -38.6708)"><path d="M89.2462 50.1788C89.2462 54.958 85.3716 58.8326 80.5924 58.8326C75.8129 58.8326 71.9382 54.958 71.9382 50.1788C71.9382 45.3992 75.8129 41.5246 80.5924 41.5246C85.3716 41.5246 89.2462 45.3992 89.2462 50.1788Z"/>
+</clipPath><filter id="filter3_f_13_349" x="39.4008" y="39.8499" width="16.1832" height="16.2985" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_13_349"/>
+</filter>
+<filter id="filter4_f_13_349" x="70.2161" y="39.8499" width="16.1832" height="16.2985" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_13_349"/>
+</filter>
+<filter id="filter5_i_13_349" x="1.58068" y="-2.04116" width="127.028" height="86.2712" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_349"/>
+</filter>
+<clipPath id="bgblur_2_13_349_clip_path" transform="translate(-1.58068 2.04116)"><path d="M119.7 20.3387L119.698 20.32H119.696C117.866 9.25252 108.255 0.812683 96.6707 0.812683C90.1031 0.812683 84.1724 3.52798 79.9313 7.89277L50.2605 7.89322C46.0191 3.52842 40.0891 0.813127 33.5211 0.813127C21.9367 0.813127 12.3268 9.25331 10.4956 20.3205L10.4938 20.32L10.4911 20.3387L4.43452 65.1108C4.43452 74.0936 11.7158 81.3762 20.6999 81.3762C26.3272 81.3762 31.2852 78.5189 34.2042 74.1753H34.2056L43.2385 59.4229C40.3008 57.3954 38.3679 54.0097 38.3679 50.1791C38.3679 43.9893 43.4037 38.9534 49.5935 38.9534C55.7216 38.9534 60.7099 43.8898 60.812 49.9939H69.377C69.4773 43.8902 74.4669 38.9534 80.5954 38.9534C86.7871 38.9534 91.8211 43.9905 91.8211 50.1791C91.8211 54.0115 89.8882 57.3954 86.9504 59.4229L95.9834 74.1753H95.9847C98.9039 78.5175 103.863 81.3762 109.49 81.3762C118.473 81.3762 125.754 74.0937 125.754 65.1108L119.7 20.3387ZM44.6922 28.0821H36.3671V36.4073H28.5214V28.0821H20.1975V20.2365H28.5214V11.9113H36.3671V20.2365H44.6922V28.0821ZM97.7478 11.9122C100.047 11.9122 101.909 13.7759 101.909 16.0732C101.909 18.3707 100.045 20.2356 97.7478 20.2356C95.4477 20.2356 93.5854 18.3702 93.5854 16.0732C93.5854 13.7758 95.4491 11.9122 97.7478 11.9122ZM89.6624 28.3209C87.3623 28.3209 85.5 26.4586 85.5 24.1599C85.5 21.8611 87.3637 19.9989 89.6624 19.9989C91.9612 19.9989 93.8233 21.8626 93.8233 24.1599C93.8251 26.4587 91.961 28.3209 89.6624 28.3209ZM97.7478 36.4063C95.4477 36.4063 93.5854 34.5409 93.5854 32.2439C93.5854 29.9465 95.4491 28.0829 97.7478 28.0829C100.047 28.0829 101.909 29.9466 101.909 32.2439C101.909 34.5409 100.046 36.4063 97.7478 36.4063ZM105.832 28.3209C103.533 28.3209 101.671 26.4586 101.671 24.1599C101.671 21.8611 103.535 19.9989 105.832 19.9989C108.132 19.9989 109.994 21.8626 109.994 24.1599C109.996 26.4587 108.132 28.3209 105.832 28.3209Z"/>
+</clipPath><linearGradient id="paint0_linear_13_349" x1="40.2396" y1="54.1758" x2="76.3696" y2="54.1758" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_13_349" x1="71.2404" y1="54.1758" x2="107.37" y2="54.1758" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint2_linear_13_349" x1="-0.45702" y1="59.7002" x2="252.795" y2="59.7002" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2BDFF"/>
+<stop offset="1" stop-color="#6CCC98"/>
+</linearGradient>
+</defs>
+</svg>
+
+                    <!-- تیتر -->
+                    <h5 class="text-white text-lg lg:text-xl">مسابقات زنده</h5>
+
+                    <!-- دیو نطقه -->
+                    <div class="rounded-sm w-12 bg-white flex flex-row indicators">
+
+                        <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- دومی -->
+                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-show="opentab === 1">
+
+                    <!-- اولی -->
+                    <div class="w-full h-auto hover:bg-slate-900 cursor-pointer flex flex-row py-2 rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game8_5_11zon.jpg" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> کلش آف کلنز </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- دومی -->
+                    <div class="w-full h-auto hover:bg-slate-900 cursor-pointer flex flex-row py-2 rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game5_9_11zon_15_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی پابجی </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men4_16_11zon_23_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men5_17_11zon_24_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- سومی -->
+                    <div class="w-full h-auto hover:bg-slate-900 cursor-pointer flex flex-row py-2 rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game6_10_11zon_16_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی آمیرزا </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men2_14_11zon_21_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- چهارمی -->
+                    <div class="w-full h-auto hover:bg-slate-900 cursor-pointer flex flex-row py-2 rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game7_11_11zon_17_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی گلمراد </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men3_15_11zon_22_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- دومی2 -->
+                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-show="opentab === 2">
+
+                    <!-- اولی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game6_10_11zon_16_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی آمیرزا </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men2_14_11zon_21_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- دومی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game5_9_11zon_15_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی پابجی </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men4_16_11zon_23_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men5_17_11zon_24_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- سومی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game7_11_11zon_17_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی گلمراد </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men3_15_11zon_22_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- چهارمی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game8_5_11zon.jpg" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> کلش آف کلنز </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3دومی -->
+                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-show="opentab === 3">
+
+                    <!-- اولی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game8_5_11zon.jpg" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> کلش آف کلنز </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- دومی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game7_11_11zon_17_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی گلمراد </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men3_15_11zon_22_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- سومی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game6_10_11zon_16_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی آمیرزا </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men1_13_11zon_20_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men2_14_11zon_21_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- چهارمی -->
+                    <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
+
+                        <!-- راست -->
+                        <div class="w-1/2 flex h-full flex-row gap-2">
+
+                            <!-- آیکون بازی -->
+                            <div class="w-1/3 lg:w-1/4 h-full rounded-lg overflow-hidden mr-2">
+
+                                <img src="imgs/game5_9_11zon_15_11zon.png" alt="cheak net!" class="w-full h-auto">
+
+                            </div>
+
+                            <!-- اسم بازی -->
+                            <div class="w-2/3 lg:w-3/4 h-full flex flex-col gap-0.5 justify-center">
+
+                                <!-- تیتر -->
+                                <h5 class="text-xs text-white lg:text-base"> بازی پابجی </h5>
+
+                                <!-- در حال بازی -->
+                                <div class="flex flex-row gap-1">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-green-700 lg:size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                                            </svg>
+
+                                    <p class="text-gray-400 text-xs lg:text-sm">درحال بازی</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 flex flex-row gap-1 items-center justify-center xl:justify-end xl:pl-4">
+
+                            <!-- آیکون راست -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men4_16_11zon_23_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                            <!-- آیکون وسط -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mx-1 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>
+
+
+                            <!-- آیکون چپ -->
+                            <div class="w-10 h-10 lg:w-11 lg:h-11 bg-white rounded-full border-white overflow-hidden">
+                                <img src="imgs/men5_17_11zon_24_11zon.png" alt="cheak net!" class="w-full h-full">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- سومی -->
+                <div class="w-full h-auto flex flex-col gap-3 mt-2">
+
+                    <!-- اعداد -->
+                    <div class="w-full flex flex-row gap-5 items-center justify-center">
+
+                        <div class="flex items-center justify-center" x-on:click=" opentab = 1 " x-bind:class="{ 'text-white transition-all text-lg' : opentab === 1}">
+                            <p class="text-sm cursor-pointer lg:text-base xl:text-xl">1</p>
+                        </div>
+
+                        <div class="flex items-center justify-center" x-on:click=" opentab = 2 " x-bind:class="{ 'text-white transition-all text-lg' : opentab === 2}">
+                            <p class="text-sm cursor-pointer lg:text-base xl:text-xl">2</p>
+                        </div>
+
+                        <div class="flex items-center justify-center" x-on:click=" opentab = 3 " x-bind:class="{ 'text-white transition-all text-lg' : opentab === 3}">
+                            <p class="text-sm cursor-pointer lg:text-base xl:text-xl">3</p>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full flex justify-center">
+                        <!-- دکمه -->
+                        <a href="#" class="py-1 px-5 items-center rounded-md bg-linear-to-r from-indigo-700 to-purple-600 text-white flex gap-3 text-xs sm:text-base xl:px-6 xl:py-2 xl:rounded-lg">مشاهده همه
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                        </svg>
+                    </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- پایین و چپ -->
+        <div class="w-full rounded-xl lg:rounded-3xl shadow-lg flex flex-col gap-3 bg-linear-to-t from-purple-900 to-purple-950">
+
+            <!-- دیو اصلی محتوا -->
+            <div class="ُw-full h-auto flex flex-col gap-3 py-7 rounded-lg">
+
+                <!-- اولی -->
+                <div class="w-full flex flex-col items-center justify-center gap-1">
+
+                    <!-- آیکن -->
+                    <svg class="size-16 lg:size-20 text-white" viewBox="0 0 115 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_13_332)">
+<foreignObject x="4.20412" y="52.1984" width="107.77" height="52.0755"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(0.61px);clip-path:url(#bgblur_0_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="1.22258">
+<path d="M55.8673 53.8845C57.1902 53.2679 58.7177 53.2664 60.0418 53.8804L110.114 77.0966C110.964 77.4907 110.964 78.699 110.114 79.0931L58.8817 102.847C58.2932 103.12 57.6143 103.119 57.0264 102.845L6.06219 79.0922C5.21486 78.6972 5.21485 77.4924 6.06218 77.0975L55.8673 53.8845Z" fill="url(#paint0_linear_13_332)" fill-opacity="0.4"/>
+<path d="M55.9321 54.0235C57.2142 53.426 58.6948 53.4236 59.978 54.0186L110.049 77.2354C110.781 77.5747 110.781 78.6147 110.049 78.9541L58.8179 102.709C58.2704 102.963 57.6383 102.962 57.0913 102.707L6.12646 78.9541C5.39698 78.6141 5.39719 77.5766 6.12646 77.2364L55.9321 54.0235Z" stroke="#DFFFFC" stroke-opacity="0.8" stroke-width="0.305645"/>
+</g>
+<foreignObject x="4.20412" y="52.1984" width="107.77" height="52.0755"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(0.61px);clip-path:url(#bgblur_1_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="1.22258">
+<path d="M55.8673 53.8845C57.1902 53.2679 58.7177 53.2664 60.0418 53.8804L110.114 77.0966C110.964 77.4907 110.964 78.699 110.114 79.0931L58.8817 102.847C58.2932 103.12 57.6143 103.119 57.0264 102.845L6.06219 79.0922C5.21486 78.6972 5.21485 77.4924 6.06218 77.0975L55.8673 53.8845Z" fill="url(#paint1_linear_13_332)" fill-opacity="0.4"/>
+<path d="M55.9321 54.0235C57.2142 53.426 58.6948 53.4236 59.978 54.0186L110.049 77.2354C110.781 77.5747 110.781 78.6147 110.049 78.9541L58.8179 102.709C58.2704 102.963 57.6383 102.962 57.0913 102.707L6.12646 78.9541C5.39698 78.6141 5.39719 77.5766 6.12646 77.2364L55.9321 54.0235Z" stroke="#DFFFFC" stroke-opacity="0.8" stroke-width="0.305645"/>
+</g>
+<foreignObject x="57.0077" y="76.0223" width="55.0178" height="45.0357"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(0.61px);clip-path:url(#bgblur_2_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="1.22258">
+<path d="M109.211 77.362C109.943 76.9971 110.803 77.5291 110.803 78.3466L110.803 94.0291C110.803 94.453 110.559 94.8392 110.177 95.0219L58.2303 119.835L58.2303 102.793L109.211 77.362Z" fill="url(#paint2_linear_13_332)" fill-opacity="0.8"/>
+<path d="M109.28 77.4983C109.91 77.1844 110.65 77.6426 110.65 78.3464L110.65 94.029C110.65 94.394 110.44 94.7269 110.111 94.8843L58.382 119.592L58.3827 102.888L109.28 77.4983Z" stroke="#DFFFFC" stroke-opacity="0.8" stroke-width="0.305645"/>
+</g>
+<foreignObject x="3.72706" y="75.9613" width="55.7343" height="45.0956"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(0.61px);clip-path:url(#bgblur_3_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="1.22258">
+<path d="M6.53748 77.2992C5.80619 76.9378 4.94964 77.4699 4.94964 78.2856L4.94964 93.972C4.94964 94.3977 5.19518 94.7852 5.5801 94.9669L58.2388 119.834L58.2373 102.851L6.53748 77.2992Z" fill="url(#paint3_linear_13_332)" fill-opacity="0.8"/>
+<path d="M6.47007 77.4358C5.84034 77.1246 5.10219 77.5834 5.10219 78.2859L5.10252 93.9724C5.10268 94.3388 5.31444 94.6722 5.64578 94.8286L58.0866 119.592L58.085 102.945L6.47007 77.4358Z" stroke="#DFFFFC" stroke-opacity="0.8" stroke-width="0.305645"/>
+</g>
+<foreignObject x="47.7944" y="40.5448" width="20.6001" height="37.5838"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(0.61px);clip-path:url(#bgblur_4_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="1.22258">
+<path d="M67.1719 76.906V41.7673H49.017V76.906H67.1719Z" fill="url(#paint4_linear_13_332)"/>
+<path d="M67.0189 41.9197V76.7527H49.1693V41.9197H67.0189Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.305645"/>
+</g>
+<foreignObject x="32.2045" y="-3.13852" width="52.5368" height="52.5368"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.67px);clip-path:url(#bgblur_5_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter6_i_13_332)" data-figma-bg-blur-radius="3.34268">
+<ellipse cx="58.3873" cy="23.0443" rx="22.8401" ry="22.8401" fill="url(#paint5_linear_13_332)" fill-opacity="0.8"/>
+<path d="M58.387 0.622131C70.7704 0.622131 80.8097 10.6606 80.8098 23.044C80.8098 35.4275 70.7705 45.4669 58.387 45.4669C46.0036 45.4667 35.9651 35.4274 35.9651 23.044C35.9653 10.6607 46.0037 0.62229 58.387 0.622131Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.83567"/>
+</g>
+<g filter="url(#filter7_f_13_332)">
+<path d="M60.1442 10.7458C62.8772 11.3314 68.5775 14.0254 69.5145 20.1161" stroke="#FFECEC" stroke-width="3.51387" stroke-linecap="round"/>
+</g>
+<g filter="url(#filter8_d_13_332)">
+<foreignObject x="36.9383" y="73.0304" width="41.8954" height="22.3851"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.67px);clip-path:url(#bgblur_6_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter9_i_13_332)" data-figma-bg-blur-radius="3.34268">
+<mask id="path-14-inside-1_13_332" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40.7228 84.1029V76.3731H74.7006V83.846C75.1043 84.3827 75.3199 84.9476 75.3199 85.5309C75.3199 89.0494 67.4762 91.9016 57.8004 91.9016C48.1247 91.9016 40.281 89.0494 40.281 85.5309C40.281 85.04 40.4337 84.562 40.7228 84.1029Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40.7228 84.1029V76.3731H74.7006V83.846C75.1043 84.3827 75.3199 84.9476 75.3199 85.5309C75.3199 89.0494 67.4762 91.9016 57.8004 91.9016C48.1247 91.9016 40.281 89.0494 40.281 85.5309C40.281 85.04 40.4337 84.562 40.7228 84.1029Z" fill="url(#paint6_linear_13_332)" fill-opacity="0.5"/>
+<path d="M40.7228 76.3731V75.7874H40.1372V76.3731H40.7228ZM40.7228 84.1029L41.2184 84.415L41.3085 84.272V84.1029H40.7228ZM74.7006 76.3731H75.2862V75.7874H74.7006V76.3731ZM74.7006 83.846H74.1149V84.0416L74.2326 84.198L74.7006 83.846ZM40.1372 76.3731V84.1029H41.3085V76.3731H40.1372ZM74.7006 75.7874H40.7228V76.9587H74.7006V75.7874ZM75.2862 83.846V76.3731H74.1149V83.846H75.2862ZM75.9055 85.5309C75.9055 84.7949 75.6316 84.1094 75.1686 83.4939L74.2326 84.198C74.577 84.6559 74.7342 85.1003 74.7342 85.5309H75.9055ZM57.8004 92.4873C62.6882 92.4873 67.1389 91.7678 70.3887 90.5861C72.0112 89.9961 73.3654 89.2797 74.3249 88.4548C75.2826 87.6315 75.9055 86.6454 75.9055 85.5309H74.7342C74.7342 86.1756 74.3768 86.8655 73.5613 87.5666C72.7478 88.266 71.5363 88.9224 69.9884 89.4853C66.8974 90.6093 62.5884 91.316 57.8004 91.316V92.4873ZM39.6954 85.5309C39.6954 86.6454 40.3183 87.6315 41.276 88.4548C42.2355 89.2797 43.5897 89.9961 45.2122 90.5861C48.462 91.7678 52.9127 92.4873 57.8004 92.4873V91.316C53.0125 91.316 48.7035 90.6093 45.6125 89.4853C44.0646 88.9224 42.8531 88.266 42.0396 87.5666C41.2241 86.8655 40.8667 86.1756 40.8667 85.5309H39.6954ZM40.2273 83.7908C39.8889 84.3281 39.6954 84.9128 39.6954 85.5309H40.8667C40.8667 85.1671 40.9785 84.7958 41.2184 84.415L40.2273 83.7908Z" fill="#DFFFFC" fill-opacity="0.5" mask="url(#path-14-inside-1_13_332)"/>
+</g>
+<foreignObject x="36.9384" y="68.0533" width="41.8954" height="19.598"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(1.67px);clip-path:url(#bgblur_7_13_332_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter10_i_13_332)" data-figma-bg-blur-radius="3.34268">
+<ellipse cx="57.8005" cy="77.7667" rx="17.5194" ry="6.3707" fill="url(#paint7_linear_13_332)" fill-opacity="0.5"/>
+<path d="M57.8006 71.6889C62.6135 71.6889 66.958 72.3991 70.0887 73.5376C71.6551 74.1072 72.9028 74.7785 73.7527 75.5092C74.6035 76.2408 75.0272 77.005 75.0272 77.7671C75.027 78.5291 74.6036 79.2934 73.7527 80.0249C72.9027 80.7557 71.6552 81.4269 70.0887 81.9966C66.958 83.135 62.6135 83.8442 57.8006 83.8442C52.9878 83.8442 48.6432 83.135 45.5125 81.9966C43.946 81.4269 42.6985 80.7556 41.8484 80.0249C40.9976 79.2934 40.5742 78.5291 40.574 77.7671C40.574 77.005 40.9977 76.2408 41.8484 75.5092C42.6985 74.7785 43.946 74.1072 45.5125 73.5376C48.6432 72.3991 52.9877 71.6889 57.8006 71.6889Z" stroke="#DFFFFC" stroke-opacity="0.5" stroke-width="0.585644"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_13_332" x="0.949647" y="0.204163" width="113.853" height="127.631" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13_332"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_332" result="shape"/>
+</filter>
+<clipPath id="bgblur_0_13_332_clip_path" transform="translate(-4.20412 -52.1984)"><path d="M55.8673 53.8845C57.1902 53.2679 58.7177 53.2664 60.0418 53.8804L110.114 77.0966C110.964 77.4907 110.964 78.699 110.114 79.0931L58.8817 102.847C58.2932 103.12 57.6143 103.119 57.0264 102.845L6.06219 79.0922C5.21486 78.6972 5.21485 77.4924 6.06218 77.0975L55.8673 53.8845Z"/>
+</clipPath><clipPath id="bgblur_1_13_332_clip_path" transform="translate(-4.20412 -52.1984)"><path d="M55.8673 53.8845C57.1902 53.2679 58.7177 53.2664 60.0418 53.8804L110.114 77.0966C110.964 77.4907 110.964 78.699 110.114 79.0931L58.8817 102.847C58.2932 103.12 57.6143 103.119 57.0264 102.845L6.06219 79.0922C5.21486 78.6972 5.21485 77.4924 6.06218 77.0975L55.8673 53.8845Z"/>
+</clipPath><clipPath id="bgblur_2_13_332_clip_path" transform="translate(-57.0077 -76.0223)"><path d="M109.211 77.362C109.943 76.9971 110.803 77.5291 110.803 78.3466L110.803 94.0291C110.803 94.453 110.559 94.8392 110.177 95.0219L58.2303 119.835L58.2303 102.793L109.211 77.362Z"/>
+</clipPath><clipPath id="bgblur_3_13_332_clip_path" transform="translate(-3.72706 -75.9613)"><path d="M6.53748 77.2992C5.80619 76.9378 4.94964 77.4699 4.94964 78.2856L4.94964 93.972C4.94964 94.3977 5.19518 94.7852 5.5801 94.9669L58.2388 119.834L58.2373 102.851L6.53748 77.2992Z"/>
+</clipPath><clipPath id="bgblur_4_13_332_clip_path" transform="translate(-47.7944 -40.5448)"><path d="M67.1719 76.906V41.7673H49.017V76.906H67.1719Z"/>
+</clipPath><filter id="filter6_i_13_332" x="32.2045" y="-3.13852" width="52.5368" height="52.5368" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4.68515" dy="3.51387"/>
+<feGaussianBlur stdDeviation="1.75693"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_332"/>
+</filter>
+<clipPath id="bgblur_5_13_332_clip_path" transform="translate(-32.2045 3.13852)"><ellipse cx="58.3873" cy="23.0443" rx="22.8401" ry="22.8401"/>
+</clipPath><filter id="filter7_f_13_332" x="53.7018" y="4.30331" width="22.2551" height="22.2551" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.34258" result="effect1_foregroundBlur_13_332"/>
+</filter>
+<filter id="filter8_d_13_332" x="39.6954" y="70.8103" width="38.5528" height="24.0195" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1.17129" dy="1.17129"/>
+<feGaussianBlur stdDeviation="0.878466"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13_332"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_332" result="shape"/>
+</filter>
+<filter id="filter9_i_13_332" x="36.9383" y="73.0304" width="41.8954" height="22.3851" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4.68515" dy="3.51387"/>
+<feGaussianBlur stdDeviation="1.75693"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_332"/>
+</filter>
+<clipPath id="bgblur_6_13_332_clip_path" transform="translate(-36.9383 -73.0304)"><path fill-rule="evenodd" clip-rule="evenodd" d="M40.7228 84.1029V76.3731H74.7006V83.846C75.1043 84.3827 75.3199 84.9476 75.3199 85.5309C75.3199 89.0494 67.4762 91.9016 57.8004 91.9016C48.1247 91.9016 40.281 89.0494 40.281 85.5309C40.281 85.04 40.4337 84.562 40.7228 84.1029Z"/>
+</clipPath><filter id="filter10_i_13_332" x="36.9384" y="68.0533" width="41.8954" height="19.598" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4.68515" dy="3.51387"/>
+<feGaussianBlur stdDeviation="1.75693"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_332"/>
+</filter>
+<clipPath id="bgblur_7_13_332_clip_path" transform="translate(-36.9384 -68.0533)"><ellipse cx="57.8005" cy="77.7667" rx="17.5194" ry="6.3707"/>
+</clipPath><linearGradient id="paint0_linear_13_332" x1="1.91963" y1="80.5948" x2="113.988" y2="80.5948" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_13_332" x1="1.91963" y1="80.5948" x2="113.988" y2="80.5948" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint2_linear_13_332" x1="54.6649" y1="106.303" x2="166.733" y2="106.34" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint3_linear_13_332" x1="60.4041" y1="105.668" x2="-51.6637" y2="105.705" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#86FDE8"/>
+</linearGradient>
+<linearGradient id="paint4_linear_13_332" x1="58.3873" y1="75.1491" x2="58.3873" y2="47.0381" gradientUnits="userSpaceOnUse">
+<stop offset="0.0258355" stop-color="#ACB6E5"/>
+<stop offset="1" stop-color="#6CCCBB"/>
+</linearGradient>
+<linearGradient id="paint5_linear_13_332" x1="33.7053" y1="33.5939" x2="129.062" y2="33.5939" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E5ACAC"/>
+<stop offset="1" stop-color="#FF0202"/>
+</linearGradient>
+<linearGradient id="paint6_linear_13_332" x1="39.353" y1="82.7759" x2="110.281" y2="82.7759" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E5ACAC"/>
+<stop offset="1" stop-color="#FF0202"/>
+</linearGradient>
+<linearGradient id="paint7_linear_13_332" x1="38.8683" y1="80.7092" x2="112.011" y2="80.7092" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EB5D5D"/>
+<stop offset="1" stop-color="#FF0202"/>
+</linearGradient>
+</defs>
+</svg>
+
+
+                    <!-- تیتر -->
+                    <h5 class="text-white text-lg lg:text-xl">نفرات برتر امروز</h5>
+
+                    <!-- دیو نطقه -->
+                    <div class="rounded-sm w-12 bg-white flex flex-row indicators">
+
+                        <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                    </div>
+                </div>
+
+                <!-- دومی -->
+                <div class="w-full flex flex-col gap-1 px-4">
+
+                    <!-- اولی -->
+                    <div class="w-full h-auto flex flex-row py-2 rounded-md px-1 bg-white/20 hover:bg-slate-900 cursor-pointer">
+
+                        <!-- راست -->
+                        <div class="w-1/2 lg:w-3/5 flex h-full flex-row items-center">
+
+                            <!-- مدال -->
+                            <div class="w-1/3 lg:w-1/4 flex flex-col h-full items-center justify-center rounded-lg overflow-hidden mr-2">
+
+                                <hr class="w-6 h-1 border-none bg-yellow-600">
+                                <hr class="w-1 h-3 border-none bg-yellow-600">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-yellow-600 flex items-center justify-center">
+                                    <p class="mt-1 text-white text-xs md:text-sm lg:text-base">1</p>
+                                </div>
+
+                            </div>
+
+                            <!-- اسم -->
+                            <h5 class="text-xs text-white md:text-sm lg:text-lg xl:text-xl"> صمد سپهری </h5>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 lg:w-2/5 h-12 xl:h-14 flex flex-row gap-1 bg-purple-200 rounded-lg rounded-br-full items-center justify-center">
+
+                            <h5 class="text-sm font-semibold mr-4 md:text-base xl:text-xl"> 800.000 <span class="text-xs font-normal md:text-sm xl:text-base"> تومان </span></h5>
+
+                        </div>
+
+                    </div>
+
+                    <!-- دومی -->
+                    <div class="w-full h-auto flex flex-row py-2 rounded-md px-1 bg-white/20 hover:bg-slate-900 cursor-pointer">
+
+                        <!-- راست -->
+                        <div class="w-1/2 lg:w-3/5 flex h-full flex-row items-center">
+
+                            <!-- مدال -->
+                            <div class="w-1/3 lg:w-1/4 flex flex-col h-full items-center justify-center rounded-lg overflow-hidden mr-2">
+
+                                <hr class="w-6 h-1 border-none bg-red-400">
+                                <hr class="w-1 h-3 border-none bg-red-400">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-red-400 flex items-center justify-center">
+                                    <p class="mt-1 text-white text-xs md:text-sm lg:text-base">2</p>
+                                </div>
+
+                            </div>
+
+                            <!-- اسم -->
+                            <h5 class="text-xs text-white md:text-sm lg:text-lg xl:text-xl"> حسین طهری </h5>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 lg:w-2/5 h-12 xl:h-14 flex flex-row gap-1 bg-purple-200 rounded-lg rounded-br-full items-center justify-center">
+
+                            <h5 class="text-sm font-semibold mr-4 md:text-base xl:text-xl"> 700.000 <span class="text-xs font-normal md:text-sm xl:text-base"> تومان </span></h5>
+
+                        </div>
+
+                    </div>
+
+                    <!-- سومی -->
+                    <div class="w-full h-auto flex flex-row py-2 rounded-md px-1 bg-white/20 hover:bg-slate-900 cursor-pointer">
+
+                        <!-- راست -->
+                        <div class="w-1/2 lg:w-3/5 flex h-full flex-row items-center">
+
+                            <!-- مدال -->
+                            <div class="w-1/3 lg:w-1/4 flex flex-col h-full items-center justify-center rounded-lg overflow-hidden mr-2">
+
+                                <hr class="w-6 h-1 border-none bg-slate-600">
+                                <hr class="w-1 h-3 border-none bg-slate-600">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-slate-600 flex items-center justify-center">
+                                    <p class="mt-1 text-white text-xs md:text-sm lg:text-base">3</p>
+                                </div>
+
+                            </div>
+
+                            <!-- اسم -->
+                            <h5 class="text-xs text-white md:text-sm lg:text-lg xl:text-xl"> شکوفه عباسی </h5>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 lg:w-2/5 h-12 xl:h-14 flex flex-row gap-1 bg-purple-200 rounded-lg rounded-br-full items-center justify-center">
+
+                            <h5 class="text-sm font-semibold mr-4 md:text-base xl:text-xl"> 400.000 <span class="text-xs font-normal md:text-sm xl:text-base"> تومان </span></h5>
+
+                        </div>
+
+                    </div>
+
+                    <!-- چهارمی -->
+                    <div class="w-full h-auto flex flex-row py-2 rounded-md px-1 bg-white/20 hover:bg-slate-900 cursor-pointer">
+
+                        <!-- راست -->
+                        <div class="w-1/2 lg:w-3/5 flex h-full flex-row items-center">
+
+                            <!-- مدال -->
+                            <div class="w-1/3 lg:w-1/4 flex flex-col h-full items-center justify-center rounded-lg overflow-hidden mr-2">
+
+                                <hr class="w-6 h-1 border-none bg-neutral-500">
+                                <hr class="w-1 h-3 border-none bg-neutral-500">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-neutral-500 flex items-center justify-center">
+                                    <p class="mt-1 text-white text-xs md:text-sm lg:text-base">4</p>
+                                </div>
+
+                            </div>
+
+                            <!-- اسم -->
+                            <h5 class="text-xs text-white md:text-sm lg:text-lg xl:text-xl"> علی بیات </h5>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 lg:w-2/5 h-12 xl:h-14 flex flex-row gap-1 bg-purple-200 rounded-lg rounded-br-full items-center justify-center">
+
+                            <h5 class="text-sm font-semibold mr-4 md:text-base xl:text-xl"> 300.000 <span class="text-xs font-normal md:text-sm xl:text-base"> تومان </span></h5>
+
+                        </div>
+
+                    </div>
+
+                    <!-- پنجمی -->
+                    <div class="w-full h-auto flex flex-row py-2 rounded-md px-1 bg-white/20 hover:bg-slate-900 cursor-pointer">
+
+                        <!-- راست -->
+                        <div class="w-1/2 lg:w-3/5 flex h-full flex-row items-center">
+
+                            <!-- مدال -->
+                            <div class="w-1/3 lg:w-1/4 flex flex-col h-full items-center justify-center rounded-lg overflow-hidden mr-2">
+
+                                <hr class="w-6 h-1 border-none bg-neutral-400">
+                                <hr class="w-1 h-3 border-none bg-neutral-400">
+                                <div class="w-6 h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-neutral-400 flex items-center justify-center">
+                                    <p class="mt-1 text-white text-xs md:text-sm lg:text-base">5</p>
+                                </div>
+
+                            </div>
+
+                            <!-- اسم -->
+                            <h5 class="text-xs text-white md:text-sm lg:text-lg xl:text-xl"> نازنین سالاری </h5>
+
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/2 lg:w-2/5 h-12 xl:h-14 flex flex-row gap-1 bg-purple-200 rounded-lg rounded-br-full items-center justify-center">
+
+                            <h5 class="text-sm font-semibold mr-4 md:text-base xl:text-xl"> 100.000 <span class="text-xs font-normal md:text-sm xl:text-base"> تومان </span></h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- سومی -->
+                <div class="w-full h-auto flex flex-col gap-3 mt-2">
+
+                    <div class="w-full flex justify-center">
+                        <!-- دکمه -->
+                        <a href="#" class="py-1 px-5 items-center rounded-md bg-linear-to-r from-indigo-700 to-purple-600 text-white flex gap-3 text-xs sm:text-base xl:px-6 xl:py-2 xl:rounded-lg">مشاهده نفرات بیشتر
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                        </svg>
+                    </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- فوتر -->
+    <div class="w-full flex flex-col">
+
+        <!-- بالا -->
+        <div class="w-full flex lg:flex-row gap-40 items-center xl:items-end justify-center p-5 px-10 -mb-20 z-10">
+
+            <img src="imgs/foter4_4_11zon_10_11zon.png" alt="cheak net!" class="w-40 xl:w-60 h-auto hidden lg:block">
+            <img src="imgs/foter3_3_11zon_9_11zon.png" alt="cheak net!" class="w-40 xl:w-60 h-auto">
+            <img src="imgs/foter2_2_11zon_8_11zon.png" alt="cheak net!" class="w-56 xl:w-80 h-auto hidden lg:block">
+
+        </div>
+
+        <!-- پایین -->
+        <div class="w-full flex flex-col lg:flex-row lg:px-10 bg-linear-to-t from-slate-950 to-slate-800/20 drop-shadow-xl pt-20 pb-10 gap-5">
+
+            <!-- منو -->
+            <div class="w-full flex items-center justify-center">
+
+                <!-- منو1 -->
+                <div class="w-1/2 flex flex-col items-center justify-center gap-3">
+
+                    <!-- دیو تیتر -->
+                    <div class=" flex-row flex items-center gap-2">
+
+                        <!-- دیو نطقه -->
+                        <div class="rounded-sm w-5 h-1 bg-white flex flex-row indicators">
+
+                            <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                        </div>
+
+                        <!-- تیتر -->
+                        <h5 class="text-white text-base lg:text-xl">دسترسی راحت</h5>
+
+                    </div>
+
+                    <!-- گزینه ها -->
+                    <ul class="flex-col flex list-disc gap-2 text-gray-500 text-sm">
+
+                        <li>
+                            <a href="#games"> مسابقات </a>
+                        </li>
+
+                        <li>
+                            <a href="#best-user"> برترین کاربران </a>
+                        </li>
+
+                        <li>
+                            <a href="#best-game"> بهترین بازی ها  </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html"> ورود و ثبت نام </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- منو2 -->
+                <div class="w-1/2 flex flex-col items-center justify-center gap-3">
+
+                    <!-- دیو تیتر -->
+                    <div class=" flex-row flex items-center gap-2">
+
+                        <!-- دیو نطقه -->
+                        <div class="rounded-sm w-5 h-1 bg-white flex flex-row indicators">
+
+                            <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                        </div>
+
+                        <!-- تیتر -->
+                        <h5 class="text-white text-base lg:text-xl">پشتیبانی و تماس</h5>
+
+                    </div>
+
+                    <!-- گزینه ها -->
+                    <ul class="flex-col flex list-disc gap-2 text-gray-500 text-sm">
+
+                        <li>
+                            <a href="#games"> درباره سایت GameHub </a>
+                        </li>
+
+                        <li>
+                            <a href="#best-user"> تماس با ما </a>
+                        </li>
+
+                        <li>
+                            <a href="#best-game"> سوالات متداول </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html"> راهنمایی سایت </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- نماد و عضویت -->
+            <div class="w-full flex flex-col items-center justify-center md:flex-row lg:gap-10">
+
+                <!-- عضویت -->
+                <div class="w-full md:w-1/2 flex flex-col gap-3 items-center justify-center my-5">
+
+                    <!-- دیو تیتر -->
+                    <div class=" flex-row flex items-center gap-2">
+
+                        <!-- دیو نطقه -->
+                        <div class="rounded-sm w-5 h-1 bg-white flex flex-row indicators">
+
+                            <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                        </div>
+
+                        <!-- تیتر -->
+                        <h5 class="text-white text-base lg:text-xl">عضویت در خبرنامه</h5>
+
+                    </div>
+
+                    <p class="text-xs text-gray-500"> با عضویت در خبرنامه از آخرین اخبار و بازی های سایت مطلع شوید </p>
+
+                    <!-- ایمیل -->
+                    <div class="w-4/5 flex flex-row gap-3 items-center justify-center xl:mt-2">
+
+                        <input type="text" placeholder=" آدرس ایمیل " class="text-gray-400 py-2 pr-3 text-xs bg-slate-800 rounded-full cursor-pointer">
+                        <input type="submit" value="عضویت" class="bg-linear-to-r from-indigo-700 to-purple-600 rounded-full text-white text-xs py-2 px-5">
+
+                    </div>
+
+                    <!-- آیکون های شبکه اجتماعی -->
+                    <div class="flex flex-row gap-3 items-center justify-center xl:mt-2">
+
+                        <!-- توییتر -->
+                        <svg class="size-7 text-white cursor-pointer" viewBox="0 0 296 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148.497 0.899536H147.825C66.4706 0.899536 0.519897 66.8501 0.519897 148.204V148.877C0.519897 230.231 66.4706 296.182 147.825 296.182H148.497C229.852 296.182 295.802 230.231 295.802 148.877V148.204C295.802 66.8501 229.852 0.899536 148.497 0.899536Z" fill="#383D38"/>
+                        <path d="M234.383 95.0923C230.338 99.1786 224.731 101.713 218.513 101.713C217.717 101.713 216.941 101.672 216.165 101.589C222.651 97.6993 227.659 91.6059 230.152 84.3436C230.152 84.3436 230.162 84.3436 230.162 84.3333C230.514 83.3608 230.803 82.378 231.031 81.3642C225.9 86.8471 218.886 90.5611 211.013 91.4507C209.803 91.5956 208.572 91.6681 207.341 91.6681C206.947 91.6681 206.565 91.6577 206.192 91.637C203.534 88.8438 200.358 86.5264 196.84 84.8298C192.919 82.9159 188.533 81.7884 183.909 81.6435C183.526 81.6228 183.154 81.6125 182.76 81.6125C178.84 81.6125 175.074 82.3056 171.598 83.5884C170.708 83.9091 169.839 84.2713 168.991 84.6851C157.973 89.8473 150.349 101.051 150.349 114.024C150.349 116.683 150.67 119.279 151.28 121.752C147.908 121.617 144.566 121.297 141.287 120.8C140.231 120.634 139.186 120.448 138.142 120.252C129.783 118.7 121.807 116.031 114.4 112.389C107.768 109.151 101.592 105.148 95.9645 100.492C91.2367 96.5923 86.9124 92.2474 83.0433 87.4886C82.8778 87.292 82.7122 87.0748 82.5467 86.8783C82.3191 87.2196 82.1122 87.5713 81.926 87.9334C79.2259 92.6611 77.6948 98.1235 77.6948 103.958C77.6948 104.134 77.6948 104.33 77.7052 104.506C77.7673 108.872 78.6983 113.031 80.3535 116.817C81.057 118.493 81.9157 120.076 82.8985 121.586C85.7951 126.045 89.747 129.759 94.423 132.325C94.6403 132.459 94.8471 132.573 95.0747 132.676C94.7436 132.738 94.3919 132.8 94.0505 132.831C93.0884 132.956 92.1056 133.018 91.1125 133.018C86.1365 133.018 81.5122 131.466 77.7259 128.818C77.7052 129.097 77.7052 129.376 77.7052 129.666C77.7052 138.925 81.5846 147.273 87.8021 153.16C92.6436 157.774 98.9024 160.888 105.854 161.788C103.351 162.708 100.651 163.195 97.8265 163.195C94.7747 163.195 91.8574 162.615 89.1883 161.55C93.1712 174.491 105.037 183.978 119.189 184.412C110.551 193.392 98.4059 198.968 84.9779 198.968C76.6293 198.968 68.7772 196.806 61.9701 193.03C78.3258 207.182 99.6473 215.727 122.976 215.727C174.526 215.727 216.31 173.943 216.31 122.393C216.31 119.559 216.186 116.745 215.927 113.972C224.452 110.61 231.217 103.72 234.414 95.0923H234.383Z" fill="white"/>
+                    </svg>
+
+                        <!-- اینستاگرام -->
+                        <svg class="size-7 text-white cursor-pointer" viewBox="0 0 296 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148.615 0.899536H147.943C66.5884 0.899536 0.637695 66.8501 0.637695 148.204V148.877C0.637695 230.231 66.5884 296.182 147.943 296.182H148.615C229.969 296.182 295.92 230.231 295.92 148.877V148.204C295.92 66.8501 229.969 0.899536 148.615 0.899536Z" fill="#383D38"/>
+                        <path d="M193.968 60.9739H102.6C77.3576 60.9739 56.8224 81.5091 56.8224 106.751V190.34C56.8224 215.583 77.3576 236.118 102.6 236.118H193.968C219.211 236.118 239.746 215.583 239.746 190.34V106.751C239.746 81.5091 219.211 60.9739 193.968 60.9739ZM72.9712 106.751C72.9712 90.4163 86.2648 77.1227 102.6 77.1227H193.968C210.303 77.1227 223.597 90.4163 223.597 106.751V190.34C223.597 206.675 210.303 219.969 193.968 219.969H102.6C86.2648 219.969 72.9712 206.675 72.9712 190.34V106.751Z" fill="white"/>
+                        <path d="M148.284 191.116C171.757 191.116 190.865 172.019 190.865 148.535C190.865 125.052 171.768 105.955 148.284 105.955C124.801 105.955 105.703 125.052 105.703 148.535C105.703 172.019 124.801 191.116 148.284 191.116ZM148.284 122.114C162.861 122.114 174.716 133.969 174.716 148.546C174.716 163.122 162.861 174.978 148.284 174.978C133.708 174.978 121.852 163.122 121.852 148.546C121.852 133.969 133.708 122.114 148.284 122.114Z" fill="white"/>
+                        <path d="M194.806 112.834C201.127 112.834 206.279 107.693 206.279 101.362C206.279 95.0303 201.138 89.8886 194.806 89.8886C188.475 89.8886 183.334 95.0303 183.334 101.362C183.334 107.693 188.475 112.834 194.806 112.834Z" fill="white"/>
+                    </svg>
+
+                        <!-- فیسبوک -->
+                        <svg class="size-7 text-white cursor-pointer" viewBox="0 0 296 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M295.479 148.536C295.479 223.104 240.205 284.75 168.399 294.754C161.685 295.685 154.816 296.172 147.843 296.172C139.795 296.172 131.891 295.53 124.194 294.289C53.8986 282.971 0.207153 222.017 0.207153 148.536C0.207153 66.9948 66.3128 0.88916 147.854 0.88916C229.394 0.88916 295.5 66.9948 295.5 148.536H295.479Z" fill="#383D38"/>
+                        <path d="M168.399 119.445V151.608H208.187L201.886 194.934H168.399V294.754C161.685 295.685 154.816 296.171 147.843 296.171C139.795 296.171 131.891 295.53 124.194 294.289V194.934H87.4998V151.608H124.194V112.255C124.194 87.8403 143.984 68.0396 168.409 68.0396V68.0603C168.482 68.0603 168.544 68.0396 168.616 68.0396H208.197V105.51H182.334C174.648 105.51 168.409 111.748 168.409 119.435L168.399 119.445Z" fill="white"/>
+                    </svg>
+
+                        <!-- تلگرام -->
+                        <svg class="size-7 text-white cursor-pointer" viewBox="0 0 297 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148.81 0.899536H148.137C66.7831 0.899536 0.83252 66.8501 0.83252 148.204V148.877C0.83252 230.231 66.7831 296.182 148.137 296.182H148.81C230.164 296.182 296.115 230.231 296.115 148.877V148.204C296.115 66.8501 230.164 0.899536 148.81 0.899536Z" fill="#383D38"/>
+                        <path d="M56.7583 143.497C57.1721 143.291 57.5861 143.094 57.9896 142.908C65.0036 139.659 72.1108 136.618 79.2076 133.576C79.5903 133.576 80.2316 133.132 80.5937 132.987C81.142 132.749 81.6903 132.521 82.2386 132.283C83.2938 131.828 84.3491 131.383 85.394 130.928C87.5044 130.028 89.6043 129.128 91.7147 128.228L104.346 122.817C112.767 119.217 121.199 115.607 129.62 112.007C138.041 108.407 146.472 104.796 154.893 101.196C163.314 97.5959 171.745 93.9855 180.166 90.3854C188.587 86.7852 197.018 83.1747 205.439 79.5746C207.312 78.7676 209.34 77.5676 211.346 77.2158C213.033 76.9158 214.678 76.3366 216.374 76.0159C219.591 75.4055 223.14 75.1572 226.223 76.4917C227.288 76.9573 228.271 77.609 229.088 78.4263C232.999 82.2954 232.451 88.6473 231.623 94.0889C225.861 132.014 220.098 169.95 214.326 207.875C213.54 213.079 212.464 218.79 208.357 222.079C204.881 224.862 199.936 225.173 195.642 223.993C191.349 222.804 187.563 220.31 183.849 217.859C168.445 207.658 153.031 197.458 137.627 187.257C133.965 184.837 129.889 181.671 129.93 177.274C129.951 174.626 131.533 172.267 133.147 170.167C146.534 152.705 165.848 140.704 180.218 124.048C182.245 121.7 183.839 117.459 181.056 116.103C179.401 115.297 177.497 116.393 175.987 117.438C156.993 130.628 138.01 143.828 119.016 157.019C112.819 161.322 106.322 165.75 98.8531 166.805C92.1701 167.757 85.4457 165.895 78.98 163.991C73.5591 162.398 68.1484 160.763 62.7586 159.077C59.893 158.188 56.9342 157.225 54.7204 155.208C52.5065 153.191 51.2342 149.798 52.5687 147.108C53.4067 145.422 55.0309 144.356 56.7379 143.487L56.7583 143.497Z" fill="#FEFFFC"/>
+                    </svg>
+
+                        <!-- لینکدین -->
+                        <svg class="size-7 text-white cursor-pointer" viewBox="0 0 296 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148.692 0.978271H148.019C66.6652 0.978271 0.714355 66.929 0.714355 148.283V148.956C0.714355 230.31 66.6652 296.261 148.019 296.261H148.692C230.046 296.261 295.997 230.31 295.997 148.956V148.283C295.997 66.929 230.046 0.978271 148.692 0.978271Z" fill="#383D38"/>
+                        <path d="M71.1341 99.123C67.2444 95.5125 65.3099 91.0434 65.3099 85.726C65.3099 80.4086 67.2547 75.7429 71.1341 72.1221C75.0239 68.5116 80.031 66.7012 86.1657 66.7012C92.3004 66.7012 97.111 68.5116 100.99 72.1221C104.88 75.7325 106.815 80.2741 106.815 85.726C106.815 91.1779 104.87 95.5125 100.99 99.123C97.1007 102.733 92.1659 104.544 86.1657 104.544C80.1655 104.544 75.0239 102.733 71.1341 99.123ZM103.546 119.834V230.527H68.5686V119.834H103.546Z" fill="#FEFFFC"/>
+                        <path d="M219.98 130.769C227.605 139.045 231.412 150.404 231.412 164.867V228.572H198.194V169.356C198.194 162.063 196.301 156.394 192.525 152.359C188.749 148.325 183.659 146.297 177.286 146.297C170.914 146.297 165.823 148.314 162.047 152.359C158.271 156.394 156.378 162.063 156.378 169.356V228.572H122.964V119.524H156.378V133.986C159.761 129.165 164.324 125.358 170.055 122.555C175.786 119.751 182.231 118.355 189.4 118.355C202.166 118.355 212.366 122.493 219.98 130.758V130.769Z" fill="#FEFFFC"/>
+                    </svg>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- نماد -->
+                <div class="w-full md:w-1/2 flex flex-col gap-3 justify-center my-5">
+
+                    <!-- دیو تیتر -->
+                    <div class="w-full flex-row flex items-center justify-center gap-2">
+
+                        <!-- دیو نطقه -->
+                        <div class="rounded-sm w-5 h-1 bg-white flex flex-row indicators">
+
+                            <div class="w-1/3 bg-yellow-500 rounded-sm p-0.5 dot"></div>
+
+                        </div>
+
+                        <!-- تیتر -->
+                        <h5 class="text-white text-base lg:text-xl">مجوز های سایت</h5>
+
+                    </div>
+
+                    <!-- خود نماد ها -->
+                    <div class="w-full flex flex-row gap-3 justify-center">
+
+                        <!-- راست -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/2 flex-col flex items-center justify-center bg-slate-800 rounded-lg py-5">
+                            <img src="imgs/namad1_18_11zon_25_11zon.png" alt="" class="w-20 md:w-16 lg:w-20 h-auto">
+                        </div>
+
+                        <!-- چپ -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/2 flex-col flex items-center justify-center bg-slate-800 rounded-lg py-5">
+                            <img src="imgs/namad2_19_11zon_26_11zon.png" alt="" class="w-20 md:w-16 lg:w-20 h-auto">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="tailwind.config.js"></script>
+
+    <script>
+        const items = document.querySelectorAll('.carousel .item');
+        const dots = document.querySelectorAll('.indicators .dot');
+        const prevBtn = document.querySelector('#prev');
+        const nextBtn = document.querySelector('#next');
+
+        let current = 2; // شروع از سومین آیتم
+
+        function updateCarousel() {
+            // حذف active از همه آیتم‌ها
+            items.forEach(item => item.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // اضافه کردن active به آیتم فعلی
+            items[current].classList.add('active');
+            dots[current].classList.add('active');
+
+            // آوردن آیتم اکتیو به وسط (اختیاری)
+            const carousel = document.querySelector('.carousel');
+            const activeItem = items[current];
+            const offset = activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2);
+            carousel.scrollTo({
+                left: offset,
+                behavior: 'smooth'
+            });
+        }
+
+        // دکمه‌های قبلی / بعدی
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % items.length;
+            updateCarousel();
+        });
+
+        // کلیک روی دایره‌ها
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                current = index;
+                updateCarousel();
+            });
+        });
+
+        updateCarousel();
+    </script>
+
+    <script>
+        (function() {
+            // تعداد کل روزهای شمارنده
+            const totalDays = 6;
+            // از روز چهارم شروع می‌شود (یعنی 2 روز گذشته)
+            let remainingTime = (totalDays - 2) * 24 * 60 * 60; // ثانیه‌های باقی‌مانده
+            const fullTime = totalDays * 24 * 60 * 60; // کل ثانیه‌ها
+
+            function updateCountdown() {
+                let days = Math.floor(remainingTime / (24 * 60 * 60));
+                let hours = Math.floor((remainingTime % (24 * 60 * 60)) / 3600);
+                let minutes = Math.floor((remainingTime % 3600) / 60);
+                let seconds = remainingTime % 60;
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+                // بروزرسانی نوار پیشرفت
+                let progressPercent = ((fullTime - remainingTime) / fullTime) * 100;
+                document.getElementById('progress').style.width = progressPercent + '%';
+
+                if (remainingTime > 0) {
+                    remainingTime--;
+                }
+            }
+
+            updateCountdown(); // برای نمایش اولیه
+            setInterval(updateCountdown, 1000);
+        })();
+    </script>
+
+</body>
+
+</html>
