@@ -1,0 +1,67 @@
+@font-face {
+    font-family: vazir;
+    src: url(Vazir-Medium.ttf);
+}
+
+body {
+    font-family: vazir;
+}
+
+.carousel .item {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.75);
+    width: 15%;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .carousel .item {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel .item {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel .item {
+        width: 100%;
+    }
+}
+
+.carousel .item.active {
+    opacity: 1;
+    transform: scale(1);
+    width: 70%;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .carousel .item.active {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel .item.active {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel .item {
+        width: 100%;
+    }
+}
+
+.overlay {
+    display: none;
+}
+
+.active .overlay {
+    display: flex;
+}
