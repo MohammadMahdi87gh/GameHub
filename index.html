@@ -7,6 +7,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="style.css">
+    <script src="tailwind.config.js"></script>
 
     <!-- metas -->
     <meta name="وبسایت بازی آنلاین و رقابتی با جوایز ویژه" content="توضیح کوتاه درباره صفحه">
@@ -149,7 +150,7 @@
         </div>
 
         <!-- منو -->
-        <div class=" md:hidden absolute top-20 w-full shadow-sm py-5 bg-slate-800" x-show="navbar">
+        <div class=" md:hidden absolute top-20 w-full shadow-sm py-5 bg-slate-800" x-cloak x-transition x-transition.duration.500ms x-show="navbar">
             <ul class="list-none flex flex-col items-center justify-center text-white gap-4 text-sm">
 
                 <!-- صفحه اصلی -->
@@ -1836,7 +1837,7 @@
                 </div>
 
                 <!-- دومی2 -->
-                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-show="opentab === 2">
+                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-cloak x-show="opentab === 2">
 
                     <!-- اولی -->
                     <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
@@ -2073,7 +2074,7 @@
                 </div>
 
                 <!-- 3دومی -->
-                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-show="opentab === 3">
+                <div class="w-full flex flex-col gap-1 px-4 mt-7" x-cloak x-show="opentab === 3">
 
                     <!-- اولی -->
                     <div class="w-full h-auto flex flex-row py-2 hover:bg-slate-900 cursor-pointer rounded-md px-1 bg-white/20">
