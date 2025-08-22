@@ -38,6 +38,7 @@ body {
     transform: scale(1);
     width: 70%;
     z-index: 10;
+    transition: all;
 }
 
 @media (min-width: 768px) {
@@ -64,4 +65,5 @@ body {
 
 .active .overlay {
     display: flex;
+
 }
